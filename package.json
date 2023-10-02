@@ -1,0 +1,36 @@
+{
+  "name": "account-backend",
+  "version": "1.0.0",
+  "description": "backend for account",
+  "main": "index.js",
+  "author": "Eddy",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "dev": "nodemon ./src/app.ts",
+    "test": "jest --watchAll --no-cache",
+    "build:openapi": "swagger-cli bundle ./openapi/openapi.dashboard.yaml --outfile openapi.dashboard.yaml --type yaml"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.2",
+    "koa": "^2.14.2",
+    "koa-body": "^6.0.1",
+    "koa-router": "^12.0.0",
+    "koa-session": "^6.4.0",
+    "passport": "^0.6.0",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.13.9",
+    "@types/koa-bodyparser": "^4.3.10",
+    "@types/koa-passport": "^6.0.1",
+    "@types/koa-router": "^7.4.5",
+    "@types/koa-session": "^6.4.2",
+    "@types/passport-google-oauth20": "^2.0.12",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
